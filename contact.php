@@ -1,9 +1,5 @@
 <?php
-/* ==========================================================================
-   ICS 2102: PHP FORM PROCESSING & DATABASE INSERTION
-   ========================================================================== */
 
-// Include database connection
 require_once 'includes/database.php';
 
 $successMessage = "";
@@ -12,24 +8,20 @@ $errorMessage = "";
 // Check if form is submitted via POST
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     
-    // Sanitize and collect form inputs
     $fullname = trim(filter_input(INPUT_POST, 'fullname', FILTER_SANITIZE_SPECIAL_CHARS));
     $email = trim(filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL));
     $role = trim(filter_input(INPUT_POST, 'role', FILTER_SANITIZE_SPECIAL_CHARS));
     $message = trim(filter_input(INPUT_POST, 'message', FILTER_SANITIZE_SPECIAL_CHARS));
 
-    // Server-Side Validation (Unit 5 requirement)
     if (empty($fullname) || empty($email) || empty($message)) {
         $errorMessage = "All fields are required.";
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $errorMessage = "Invalid email format.";
     } else {
         try {
-            // Prepared SQL Statement to prevent SQL Injection (Unit 7 requirement)
             $sql = "INSERT INTO members (fullname, email, role, message) VALUES (:fullname, :email, :role, :message)";
             $stmt = $pdo->prepare($sql);
             
-            // Execute statement with bound parameters
             $stmt->execute([
                 ':fullname' => $fullname,
                 ':email'    => $email,
@@ -118,6 +110,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
             </div>
 
             <br>
+
+            <br>
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p><strong>Email:</strong> filmandcontentcreatorssociety@gmail.com</p>
+                <p><strong>Phone:</strong> +263 777 777 777</p>
+                <p><strong>Location:</strong> Hostel 2, Room 212</p>
+            </div>
 
             <button type="submit" name="submit">Submit Application</button>
         </form>
