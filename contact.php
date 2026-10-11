@@ -4,7 +4,7 @@
    ========================================================================== */
 
 // Include database connection
-require_once 'includes/db.php';
+require_once 'includes/database.php';
 
 $successMessage = "";
 $errorMessage = "";
