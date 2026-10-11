@@ -1,11 +1,12 @@
 <?php
-$host     = 'mysql-film-content-creator.alwaysdata.net'; // Alwaysdata Host
-$dbname   = 'film-content-creator_society'; // Alwaysdata DB Name
-$username = 'film-content-creator';                      // Alwaysdata Username
-$password = 'rFbT_83.u-KU2j#';          // Alwaysdata Password
+$host     = 'mysql-b5f7010-hit-b6b2.k.aivencloud.com';
+$port     = '14994';
+$dbname   = 'defaultdb';
+$username = 'avnadmin';
+$password = 'AVNS_ZDaNdVo4AOSGI8sjIvI'; // Copy this from the Overview tab (click the eye icon to unhide)
 
 try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
+    $pdo = new PDO("mysql:host=$host;port=$port;dbname=$dbname;charset=utf8mb4", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
