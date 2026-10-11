@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Film & Content Creators Society</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Film & Content Creators Society</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.php">Join Us</a></li>
+                <li><button id="themeToggle" class="theme-toggle-btn" onclick="toggleTheme()">☀️ Light Mode</button></li>
+            </ul>
+        </nav>
+    </header>
+
+   <main>
+        <h2>Upcoming Events & Workshops</h2>
+        
+        <!-- Container where static list or dynamic JS arrays will render -->
+        <div id="events-list">
+            <article class="event-card">
+                <h3>48-Hour Film Challenge</h3>
+                <p><strong>Date:</strong> November 14, 2026</p>
+                <p><strong>Location:</strong> N101 </p>
+                <p>Teams get 48 hours to write, shoot, and edit a 3-minute short film based on a random idea.</p>
+            </article>
+
+            <article class="event-card">
+                <h3>Lighting & Camera Masterclass</h3>
+                <p><strong>Date:</strong> November 28, 2026</p>
+                <p><strong>Location:</strong> N102 </p>
+                <p>Hands-on session using cinema cameras, three-point lighting, and wireless mics.</p>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Film & Content Creators Society. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

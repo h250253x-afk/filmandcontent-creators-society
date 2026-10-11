@@ -1,0 +1,190 @@
+:root {
+    --bg-main: #0f172a;
+    --bg-card: #1e293b;
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --accent-cyan: #06b6d4;
+    --accent-purple: #a855f7;
+    --accent-amber: #f59e0b;
+    --border-color: #334155;
+    --header-bg: linear-gradient(135deg, #1e1b4b 0%, #311042 100%);
+    --hero-bg: linear-gradient(135deg, #2e1065 0%, #0f172a 100%);
+}
+
+body.light-mode {
+    --bg-main: #f8fafc;
+    --bg-card: #ffffff;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --border-color: #e2e8f0;
+    --header-bg: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    --hero-bg: linear-gradient(135deg, #e0e7ff 0%, #f3e8ff 100%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: var(--header-bg);
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+header h1 {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+nav a {
+    color: #e0e7ff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+nav a:hover {
+    background-color: var(--accent-amber);
+    color: #0f172a;
+}
+
+.theme-toggle-btn {
+    background-color: var(--accent-cyan);
+    color: #0f172a;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    flex: 1;
+}
+
+h2 {
+    color: var(--accent-cyan);
+    margin-bottom: 1rem;
+    border-bottom: 3px solid var(--accent-purple);
+    padding-bottom: 0.5rem;
+}
+
+.hero {
+    background: var(--hero-bg);
+    border: 2px solid var(--accent-purple);
+    border-radius: 12px;
+    padding: 3rem 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    background: linear-gradient(45deg, var(--accent-cyan), var(--accent-purple));
+    color: #ffffff;
+    padding: 0.8rem 1.8rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    margin-top: 1rem;
+}
+
+.event-card, form {
+    background-color: var(--bg-card);
+    border-left: 5px solid var(--accent-cyan);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background-color: var(--bg-card);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th {
+    background: linear-gradient(90deg, var(--accent-purple), var(--accent-cyan));
+    color: #ffffff;
+    padding: 1rem;
+}
+
+td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 3px solid var(--border-color);
+}
+
+input[type="text"], input[type="email"], select, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.4rem;
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    border-radius: 6px;
+}
+
+button[type="submit"] {
+    background-color: var(--accent-amber);
+    color: #0f172a;
+    border: none;
+    padding: 0.8rem 1.8rem;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+footer {
+    background: var(--header-bg);
+    text-align: center;
+    padding: 1.2rem;
+    margin-top: auto;
+    color: #e0e7ff;
+}
