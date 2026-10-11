@@ -1,4 +1,6 @@
 <?php
+ini_set('display_errors', 0);
+error_reporting(E_ALL);
 
 require_once 'includes/database.php';
 
@@ -112,12 +114,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
             <br>
 
             <br>
-            <div class="contact-info">
-                <h3>Get in Touch</h3>
-                <p><strong>Email:</strong> filmandcontentcreatorssociety@gmail.com</p>
-                <p><strong>Phone:</strong> +263 777 777 777</p>
-                <p><strong>Location:</strong> Hostel 2, Room 212</p>
+
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Contact Information</h2>
+                    <p><strong>Email:</strong> filmandcontentcreatorssociety@gmail.com</p>
+                    <p><strong>Phone:</strong> +263 777 777 777</p>
+                    <p><strong>Location:</strong> Hostel 2, Room 212</p>
+                </div>
+
+                <!-- Contact Form Section -->
+                <form action="contact.php" method="POST">
+                <!-- your existing form fields here -->
+                </form>
             </div>
+
+            <br>
 
             <button type="submit" name="submit">Submit Application</button>
         </form>
